@@ -19,5 +19,20 @@ public class Time {
         this.minute = minute;
         this.second = second;
     }
+    public void setTime(long elapsedTime) {
+        time = elapsedTime;
+    }
+
+    public int getHour() {
+        return (int) (time / (60 * 60 * 1000)) % 24;
+    }
+
+    public int getMinute() {
+        return (int) (time / (60 * 1000)) % 60;
+    }
+
+    public int getSecond() {
+        return (int)(time / 1000) % 60;
+    }
 
 }

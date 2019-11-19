@@ -9,9 +9,11 @@ public class Account {
     private Date dateCreated;
 
     public Account() {
+        dateCreated = new Date();
     }
 
     public Account(int id, double balance) {
+        this();
         this.id = id;
         this.balance = balance;
     }
@@ -40,8 +42,8 @@ public class Account {
         this.annualInterestRate = annualInterestRate / 100;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
+    public String getDateCreated() {
+        return this.dateCreated.toString();
     }
 
     public double getMonthlyInterestRate() {
